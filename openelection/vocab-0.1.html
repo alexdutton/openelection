@@ -111,22 +111,22 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 }
 
     </style></head><body><h1>Ontology for the openelectiondata.org project</h1><dl class="doc-info"><dt>This Version</dt><dd><a href="http://openelectiondata.org/0.1/">http://openelectiondata.org/0.1/</a> [<a href="http://openelectiondata.org/0.1/schema.html">HTML</a>]</dd><dt>Latest Version</dt><dd><a href="http://openelectiondata.org/0.1/">http://openelectiondata.org/0.1/</a></dd><dt>Authors</dt><dd>Chris Taggart</dd><dd>Alexander Dutton</dd><dt>Contributors</dt></dl><h2 id="toc">Table of Contents</h2><ul class="toc"><li><a href="#sec-introduction">Introduction</a></li><li><a href="#sec-namespace">Namespace</a></li><li><a href="#sec-terms">Summary of Terms</a></li><li><a href="#sec-classes">Vocabulary Classes</a></li><li><a href="#sec-properties">Vocabulary Properties</a></li><li><a href="#sec-schema">RDF Schema</a></li></ul><h2 id="sec-introduction">Introduction</h2><h2 id="sec-changes">Changes From Previous Version</h2><ul/><h2 id="sec-namespace">Namespace</h2><p>The URI for this vocabulary is </p><pre><code>http://openelectiondata.org/0.1/</code></pre><p>
-          When used in XML documents the suggested prefix is <code>openelection</code></p><p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p><pre><code>http://openelectiondata.org/0.1/candidacy
+          When used in XML documents the suggested prefix is <code>openelection</code></p><p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p><pre><code>http://openelectiondata.org/0.1/electionArea
 http://openelectiondata.org/0.1/Party</code></pre><p>The term name for a class always starts with an uppercase character. Where the term name is comprised of multiple 
       concatenated words, the leading character of each word will be an uppercase character. For example:
       </p><pre><code>Party
-Poll</code></pre><p>The term name for a property always starts with an lowercase character. Where the term name is comprised of multiple 
+Election</code></pre><p>The term name for a property always starts with an lowercase character. Where the term name is comprised of multiple 
       concatenated words, the leading character of the second and each subsequent word will be an uppercase character. For example:
-      </p><pre><code>candidacy
-candidate</code></pre><h2 id="sec-terms">Summary of Terms</h2><p>This vocabulary defines
+      </p><pre><code>electionArea
+electorate</code></pre><h2 id="sec-terms">Summary of Terms</h2><p>This vocabulary defines
 
-      4 classes 
+      5 classes 
         
       and 
-      3 properties 
+      9 properties 
         
       .
-    </p><table><tr><th>Term Name</th><th>Type</th><th>Definition</th></tr><tr><td><a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">Candidacy</a></td><td>class</td><td>An instance of a Candidate standing at a Poll for a Party.</td></tr><tr><td><a href="#term-Candidate" title="http://openelectiondata.org/0.1/Candidate">Candidate</a></td><td>class</td><td>A prospective candidate for political office.</td></tr><tr><td><a href="#term-Party" title="http://openelectiondata.org/0.1/Party">Party</a></td><td>class</td><td>A political organisation seeking and/or holding political power.</td></tr><tr><td><a href="#term-Poll" title="http://openelectiondata.org/0.1/Poll">Poll</a></td><td>class</td><td>An instance of voting in order to determine a representative.</td></tr><tr><td><a href="#term-candidacy" title="http://openelectiondata.org/0.1/candidacy">candidacy</a></td><td>property</td><td>A Candidacy for the Poll</td></tr><tr><td><a href="#term-candidate" title="http://openelectiondata.org/0.1/candidate">candidate</a></td><td>property</td><td>The Candidate for the Candidacy</td></tr><tr><td><a href="#term-party" title="http://openelectiondata.org/0.1/party">party</a></td><td>property</td><td>The Party being represented by the Candidacy</td></tr></table><h2 id="sec-classes">Vocabulary Classes</h2><div class="class"><h3 id="term-Candidacy">Class: Candidacy</h3><div class="description"><p class="comment">An instance of a Candidate standing at a Poll for a Party.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/Candidacy</td></tr><tr><th>Label:</th><td>Candidacy</td></tr><tr><th>Subclass of</th><td><a href="http://purl.org/dc/dcmitype/Event">http://purl.org/dc/dcmitype/Event</a> and <a href="http://purl.org/NET/c4dm/event.owl#Event">http://purl.org/NET/c4dm/event.owl#Event</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+    </p><table><tr><th>Term Name</th><th>Type</th><th>Definition</th></tr><tr><td><a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">Candidacy</a></td><td>class</td><td>An instance of a Candidate standing at a Poll for a Party.</td></tr><tr><td><a href="#term-Candidate" title="http://openelectiondata.org/0.1/Candidate">Candidate</a></td><td>class</td><td>A prospective candidate for political office.</td></tr><tr><td><a href="#term-Election" title="http://openelectiondata.org/0.1/Election">Election</a></td><td>class</td><td>A co-ordinated set of polls.</td></tr><tr><td><a href="#term-Party" title="http://openelectiondata.org/0.1/Party">Party</a></td><td>class</td><td>A political organisation seeking and/or holding political power.</td></tr><tr><td><a href="#term-Poll" title="http://openelectiondata.org/0.1/Poll">Poll</a></td><td>class</td><td>An instance of voting in order to determine a representative.</td></tr><tr><td><a href="#term-ballotsIssued" title="http://openelectiondata.org/0.1/ballotsIssued">ballotsIssued</a></td><td>property</td><td>The number of ballots issued to voters.</td></tr><tr><td><a href="#term-candidacy" title="http://openelectiondata.org/0.1/candidacy">candidacy</a></td><td>property</td><td>A Candidacy for the Poll</td></tr><tr><td><a href="#term-candidate" title="http://openelectiondata.org/0.1/candidate">candidate</a></td><td>property</td><td>The Candidate for the Candidacy</td></tr><tr><td><a href="#term-candidateVoteCount" title="http://openelectiondata.org/0.1/candidateVoteCount">candidateVoteCount</a></td><td>property</td><td>The number of votes for a candidate.</td></tr><tr><td><a href="#term-elected" title="http://openelectiondata.org/0.1/elected">elected</a></td><td>property</td><td>Whether the candidate secured enough votes to be elected.</td></tr><tr><td><a href="#term-electionArea" title="http://openelectiondata.org/0.1/electionArea">electionArea</a></td><td>property</td><td>The area being polled.</td></tr><tr><td><a href="#term-electorate" title="http://openelectiondata.org/0.1/electorate">electorate</a></td><td>property</td><td>The number of eligible voters in the election area.</td></tr><tr><td><a href="#term-party" title="http://openelectiondata.org/0.1/party">party</a></td><td>property</td><td>The Party being represented by the Candidacy</td></tr><tr><td><a href="#term-rejectedBallots" title="http://openelectiondata.org/0.1/rejectedBallots">rejectedBallots</a></td><td>property</td><td>The number of ballots which were rejected.</td></tr></table><h2 id="sec-classes">Vocabulary Classes</h2><div class="class"><h3 id="term-Candidacy">Class: Candidacy</h3><div class="description"><p class="comment">An instance of a Candidate standing at a Poll for a Party.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/Candidacy</td></tr><tr><th>Label:</th><td>Candidacy</td></tr><tr><th>Subclass of</th><td><a href="http://purl.org/dc/dcmitype/Event">http://purl.org/dc/dcmitype/Event</a> and <a href="http://purl.org/NET/c4dm/event.owl#Event">http://purl.org/NET/c4dm/event.owl#Event</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
               
                   A <a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a>
                  is something that, amongst other things, 
@@ -140,7 +140,15 @@ candidate</code></pre><h2 id="sec-terms">Summary of Terms</h2><p>This vocabulary
                  is something that, amongst other things, 
                 
         is a
-        <a href="http://xmlns.com/foaf/0.1/Person">foaf:Person</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Party">Class: Party</h3><div class="description"><p class="comment">A political organisation seeking and/or holding political power.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/Party</td></tr><tr><th>Label:</th><td>Political party</td></tr><tr><th>Subclass of</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+        <a href="http://xmlns.com/foaf/0.1/Person">foaf:Person</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Election">Class: Election</h3><div class="description"><p class="comment">A co-ordinated set of polls.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/Election</td></tr><tr><th>Label:</th><td>Election</td></tr><tr><th>Subclass of</th><td><a href="http://purl.org/dc/dcmitype/Event">http://purl.org/dc/dcmitype/Event</a> and <a href="http://purl.org/NET/c4dm/event.owl#Event">http://purl.org/NET/c4dm/event.owl#Event</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Election" title="http://openelectiondata.org/0.1/Election">openelection:Election</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://purl.org/dc/dcmitype/Event">http://purl.org/dc/dcmitype/Event</a> and 
+        is a
+        <a href="http://purl.org/NET/c4dm/event.owl#Event">http://purl.org/NET/c4dm/event.owl#Event</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Party">Class: Party</h3><div class="description"><p class="comment">A political organisation seeking and/or holding political power.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/Party</td></tr><tr><th>Label:</th><td>Political party</td></tr><tr><th>Subclass of</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
               
                   A <a href="#term-Party" title="http://openelectiondata.org/0.1/Party">openelection:Party</a>
                  is something that, amongst other things, 
@@ -154,16 +162,40 @@ candidate</code></pre><h2 id="sec-terms">Summary of Terms</h2><p>This vocabulary
         is a
         <a href="http://purl.org/dc/dcmitype/Event">http://purl.org/dc/dcmitype/Event</a> and 
         is a
-        <a href="http://purl.org/NET/c4dm/event.owl#Event">http://purl.org/NET/c4dm/event.owl#Event</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><h2 id="sec-properties">Vocabulary Properties</h2><div class="property"><h3 id="term-candidacy">Property: candidacy</h3><div class="description"><p class="comment">A Candidacy for the Poll</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/candidacy</td></tr><tr><th>Label:</th><td>candidacy</td></tr><tr><th>Domain</th><td><a href="#term-Poll" title="http://openelectiondata.org/0.1/Poll">openelection:Poll</a></td></tr><tr><th>Range</th><td><a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+        <a href="http://purl.org/NET/c4dm/event.owl#Event">http://purl.org/NET/c4dm/event.owl#Event</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><h2 id="sec-properties">Vocabulary Properties</h2><div class="property"><h3 id="term-ballotsIssued">Property: ballotsIssued</h3><div class="description"><p class="comment">The number of ballots issued to voters.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/ballotsIssued</td></tr><tr><th>Label:</th><td>number of ballots issued</td></tr><tr><th>Domain</th><td><a href="#term-Poll" title="http://openelectiondata.org/0.1/Poll">openelection:Poll</a></td></tr><tr><th>Range</th><td><a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-ballotsIssued" title="http://openelectiondata.org/0.1/ballotsIssued">openelection:ballotsIssued</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-Poll" title="http://openelectiondata.org/0.1/Poll">openelection:Poll</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-candidacy">Property: candidacy</h3><div class="description"><p class="comment">A Candidacy for the Poll</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/candidacy</td></tr><tr><th>Label:</th><td>candidacy</td></tr><tr><th>Domain</th><td><a href="#term-Poll" title="http://openelectiondata.org/0.1/Poll">openelection:Poll</a></td></tr><tr><th>Range</th><td><a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
                     Having a <a href="#term-candidacy" title="http://openelectiondata.org/0.1/candidacy">openelection:candidacy</a>
                     implies being
                    something that, amongst other things, is a <a href="#term-Poll" title="http://openelectiondata.org/0.1/Poll">openelection:Poll</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-candidate">Property: candidate</h3><div class="description"><p class="comment">The Candidate for the Candidacy</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/candidate</td></tr><tr><th>Label:</th><td>candidate</td></tr><tr><th>Domain</th><td><a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a></td></tr><tr><th>Range</th><td><a href="#term-Candidate" title="http://openelectiondata.org/0.1/Candidate">openelection:Candidate</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
                     Having a <a href="#term-candidate" title="http://openelectiondata.org/0.1/candidate">openelection:candidate</a>
                     implies being
-                   something that, amongst other things, is a <a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-party">Property: party</h3><div class="description"><p class="comment">The Party being represented by the Candidacy</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/party</td></tr><tr><th>Label:</th><td>party</td></tr><tr><th>Domain</th><td><a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a></td></tr><tr><th>Range</th><td><a href="#term-Party" title="http://openelectiondata.org/0.1/Party">openelection:Party</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                   something that, amongst other things, is a <a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-candidateVoteCount">Property: candidateVoteCount</h3><div class="description"><p class="comment">The number of votes for a candidate.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/candidateVoteCount</td></tr><tr><th>Label:</th><td>votes</td></tr><tr><th>Domain</th><td><a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a></td></tr><tr><th>Range</th><td><a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-candidateVoteCount" title="http://openelectiondata.org/0.1/candidateVoteCount">openelection:candidateVoteCount</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-elected">Property: elected</h3><div class="description"><p class="comment">Whether the candidate secured enough votes to be elected.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/elected</td></tr><tr><th>Label:</th><td>elected</td></tr><tr><th>Domain</th><td><a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a></td></tr><tr><th>Range</th><td><a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-elected" title="http://openelectiondata.org/0.1/elected">openelection:elected</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-electionArea">Property: electionArea</h3><div class="description"><p class="comment">The area being polled.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/electionArea</td></tr><tr><th>Label:</th><td>election area</td></tr><tr><th>Domain</th><td><a href="#term-Poll" title="http://openelectiondata.org/0.1/Poll">openelection:Poll</a></td></tr><tr><th>Range</th><td>Union of 
+        
+          <a href="http://data.ordnancesurvey.co.uk/ontology/admingeo/WestminsterConstituency">http://data.ordnancesurvey.co.uk/ontology/admingeo/WestminsterConstituency</a>
+          , <a href="http://data.ordnancesurvey.co.uk/ontology/admingeo/Ward">http://data.ordnancesurvey.co.uk/ontology/admingeo/Ward</a>
+           or a <a href="http://data.ordnancesurvey.co.uk/ontology/admingeo/DistrictWard">http://data.ordnancesurvey.co.uk/ontology/admingeo/DistrictWard</a>
+        
+      </td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-electionArea" title="http://openelectiondata.org/0.1/electionArea">openelection:electionArea</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-Poll" title="http://openelectiondata.org/0.1/Poll">openelection:Poll</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-electorate">Property: electorate</h3><div class="description"><p class="comment">The number of eligible voters in the election area.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/electorate</td></tr><tr><th>Label:</th><td>size of electorate</td></tr><tr><th>Domain</th><td><a href="#term-Poll" title="http://openelectiondata.org/0.1/Poll">openelection:Poll</a></td></tr><tr><th>Range</th><td><a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-electorate" title="http://openelectiondata.org/0.1/electorate">openelection:electorate</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-Poll" title="http://openelectiondata.org/0.1/Poll">openelection:Poll</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-party">Property: party</h3><div class="description"><p class="comment">The Party being represented by the Candidacy</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/party</td></tr><tr><th>Label:</th><td>party</td></tr><tr><th>Domain</th><td><a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a></td></tr><tr><th>Range</th><td><a href="#term-Party" title="http://openelectiondata.org/0.1/Party">openelection:Party</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
                     Having a <a href="#term-party" title="http://openelectiondata.org/0.1/party">openelection:party</a>
                     implies being
-                   something that, amongst other things, is a <a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><h2 id="sec-schema">RDF Schema</h2><p>The schema included here is informational only. The normative schema can be found at <a href="http://openelectiondata.org/0.1/.rdf">http://openelectiondata.org/0.1/.rdf</a></p><pre><code class="xml"><span class="elem">&lt;rdf:RDF</span>
+                   something that, amongst other things, is a <a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-rejectedBallots">Property: rejectedBallots</h3><div class="description"><p class="comment">The number of ballots which were rejected.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/rejectedBallots</td></tr><tr><th>Label:</th><td>number of rejected ballots</td></tr><tr><th>Domain</th><td><a href="#term-Poll" title="http://openelectiondata.org/0.1/Poll">openelection:Poll</a></td></tr><tr><th>Range</th><td><a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-rejectedBallots" title="http://openelectiondata.org/0.1/rejectedBallots">openelection:rejectedBallots</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-Poll" title="http://openelectiondata.org/0.1/Poll">openelection:Poll</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><h2 id="sec-schema">RDF Schema</h2><p>The schema included here is informational only. The normative schema can be found at <a href="http://openelectiondata.org/0.1/.rdf">http://openelectiondata.org/0.1/.rdf</a></p><pre><code class="xml"><span class="elem">&lt;rdf:RDF</span>
    <span class="attr">xmlns:owl</span>="<span class="attrVal">http://www.w3.org/2002/07/owl#</span>"
    <span class="attr">xmlns:vann</span>="<span class="attrVal">http://purl.org/vocab/vann/</span>"
    <span class="attr">xmlns:dct</span>="<span class="attrVal">http://purl.org/dc/terms/</span>"
@@ -171,6 +203,8 @@ candidate</code></pre><h2 id="sec-terms">Summary of Terms</h2><p>This vocabulary
    <span class="attr">xmlns:dc</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/</span>"
    <span class="attr">xmlns:rdfs</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#</span>"
    <span class="attr">xmlns:rdf</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+   <span class="attr">xmlns:admingeo</span>="<span class="attrVal">http://data.ordnancesurvey.co.uk/ontology/admingeo/</span>"
+   <span class="attr">xmlns:xsd</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#</span>"
    <span class="attr">xmlns:event</span>="<span class="attrVal">http://purl.org/NET/c4dm/event.owl#</span>"
    <span class="attr">xmlns:foaf</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/</span>"
    <span class="attr">xmlns:openelection</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">&gt;</span>
@@ -205,6 +239,15 @@ candidate</code></pre><h2 id="sec-terms">Summary of Terms</h2><p>This vocabulary
     <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">/&gt;</span>
   <span class="elem">&lt;/rdfs:Class&gt;</span>
   
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://openelectiondata.org/0.1/Election</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span><span class="elem">&gt;</span><span class="text">Election</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span><span class="text">A co-ordinated set of polls.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdf:type</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2002/07/owl#Class</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/dc/dcmitype/Event</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/NET/c4dm/event.owl#Event</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
   <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://openelectiondata.org/0.1/Poll</span>"<span class="elem">&gt;</span>
     <span class="elem">&lt;rdfs:label</span><span class="elem">&gt;</span><span class="text">Poll</span><span class="elem">&lt;/rdfs:label&gt;</span>
     <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span>
@@ -233,6 +276,46 @@ candidate</code></pre><h2 id="sec-terms">Summary of Terms</h2><p>This vocabulary
     <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">/&gt;</span>
   <span class="elem">&lt;/rdfs:Class&gt;</span>
   
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://openelectiondata.org/0.1/electionArea</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span><span class="elem">&gt;</span><span class="text">election area</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span><span class="text">The area being polled.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/Poll</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://data.ordnancesurvey.co.uk/ontology/admingeo/WestminsterConstituency</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://data.ordnancesurvey.co.uk/ontology/admingeo/Ward</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://data.ordnancesurvey.co.uk/ontology/admingeo/DistrictWard</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:range&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://openelectiondata.org/0.1/electorate</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span><span class="elem">&gt;</span><span class="text">size of electorate</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span><span class="text">The number of eligible voters in the election area.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/Poll</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#integer</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://openelectiondata.org/0.1/ballotsIssued</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span><span class="elem">&gt;</span><span class="text">number of ballots issued</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span><span class="text">The number of ballots issued to voters.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/Poll</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#integer</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://openelectiondata.org/0.1/rejectedBallots</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span><span class="elem">&gt;</span><span class="text">number of rejected ballots</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span><span class="text">The number of ballots which were rejected.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/Poll</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#integer</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
   <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://openelectiondata.org/0.1/candidacy</span>"<span class="elem">&gt;</span>
     <span class="elem">&lt;rdfs:label</span><span class="elem">&gt;</span><span class="text">candidacy</span><span class="elem">&lt;/rdfs:label&gt;</span>
     <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span><span class="text">A Candidacy for the Poll</span><span class="elem">&lt;/rdfs:comment&gt;</span>
@@ -254,6 +337,22 @@ candidate</code></pre><h2 id="sec-terms">Summary of Terms</h2><p>This vocabulary
     <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span><span class="text">The Party being represented by the Candidacy</span><span class="elem">&lt;/rdfs:comment&gt;</span>
     <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/Candidacy</span>"<span class="elem">/&gt;</span>
     <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/Party</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://openelectiondata.org/0.1/candidateVoteCount</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span><span class="elem">&gt;</span><span class="text">votes</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span><span class="text">The number of votes for a candidate.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/Candidacy</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#integer</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://openelectiondata.org/0.1/elected</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span><span class="elem">&gt;</span><span class="text">elected</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span><span class="text">Whether the candidate secured enough votes to be elected.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/Candidacy</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#boolean</span>"<span class="elem">/&gt;</span>
     <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">/&gt;</span>
   <span class="elem">&lt;/rdf:Property&gt;</span>
 <span class="elem">&lt;/rdf:RDF&gt;</span>

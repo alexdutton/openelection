@@ -5,12 +5,16 @@
     <!ENTITY foaf "http://xmlns.com/foaf/0.1/">
     <!ENTITY event "http://purl.org/NET/c4dm/event.owl#">
     <!ENTITY dctype "http://purl.org/dc/dcmitype/">
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+    <!ENTITY admingeo "http://data.ordnancesurvey.co.uk/ontology/admingeo/">
 ]>
 
 <rdf:RDF
     xmlns:openelection="&openelection;"
     xmlns:foaf="&foaf;"
     xmlns:event="&event;"
+    xmlns:xsd="&xsd;"
+    xmlns:admingeo="&admingeo;"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -51,6 +55,16 @@
     <rdfs:isDefinedBy rdf:resource="&openelection;"/>
   </rdfs:Class>
 
+  <rdfs:Class rdf:about="&openelection;Election">
+    <rdfs:label>Election</rdfs:label>
+    <rdfs:comment>A co-ordinated set of polls.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="&dctype;Event"/>
+    <rdfs:subClassOf rdf:resource="&event;Event"/>
+    <rdfs:isDefinedBy rdf:resource="&openelection;"/>
+  </rdfs:Class>
+
+
   <rdfs:Class rdf:about="&openelection;Poll">
     <rdfs:label>Poll</rdfs:label>
     <rdfs:comment>An instance of voting in order to determine a representative.</rdfs:comment>
@@ -78,6 +92,48 @@
     <rdfs:isDefinedBy rdf:resource="&openelection;"/>
   </rdfs:Class>
 
+  <rdf:Property rdf:about="&openelection;electionArea">
+    <rdfs:label>election area</rdfs:label>
+    <rdfs:comment>The area being polled.</rdfs:comment>
+    <rdfs:domain rdf:resource="&openelection;Poll"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="&admingeo;WestminsterConstituency"/>
+          <owl:Class rdf:about="&admingeo;Ward"/>
+          <owl:Class rdf:about="&admingeo;DistrictWard"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:isDefinedBy rdf:resource="&openelection;"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="&openelection;electorate">
+    <rdfs:label>size of electorate</rdfs:label>
+    <rdfs:comment>The number of eligible voters in the election area.</rdfs:comment>
+    <rdfs:domain rdf:resource="&openelection;Poll"/>
+    <rdfs:range rdf:resource="&xsd;integer"/>
+    <rdfs:isDefinedBy rdf:resource="&openelection;"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="&openelection;ballotsIssued">
+    <rdfs:label>number of ballots issued</rdfs:label>
+    <rdfs:comment>The number of ballots issued to voters.</rdfs:comment>
+    <rdfs:domain rdf:resource="&openelection;Poll"/>
+    <rdfs:range rdf:resource="&xsd;integer"/>
+    <rdfs:isDefinedBy rdf:resource="&openelection;"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="&openelection;rejectedBallots">
+    <rdfs:label>number of rejected ballots</rdfs:label>
+    <rdfs:comment>The number of ballots which were rejected.</rdfs:comment>
+    <rdfs:domain rdf:resource="&openelection;Poll"/>
+    <rdfs:range rdf:resource="&xsd;integer"/>
+    <rdfs:isDefinedBy rdf:resource="&openelection;"/>
+  </rdf:Property>
+
+
+
   <rdf:Property rdf:about="&openelection;candidacy">
     <rdfs:label>candidacy</rdfs:label>
     <rdfs:comment>A Candidacy for the Poll</rdfs:comment>
@@ -99,6 +155,22 @@
     <rdfs:comment>The Party being represented by the Candidacy</rdfs:comment>
     <rdfs:domain rdf:resource="&openelection;Candidacy"/>
     <rdfs:range rdf:resource="&openelection;Party"/>
+    <rdfs:isDefinedBy rdf:resource="&openelection;"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="&openelection;candidateVoteCount">
+    <rdfs:label>votes</rdfs:label>
+    <rdfs:comment>The number of votes for a candidate.</rdfs:comment>
+    <rdfs:domain rdf:resource="&openelection;Candidacy"/>
+    <rdfs:range rdf:resource="&xsd;integer"/>
+    <rdfs:isDefinedBy rdf:resource="&openelection;"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="&openelection;elected">
+    <rdfs:label>elected</rdfs:label>
+    <rdfs:comment>Whether the candidate secured enough votes to be elected.</rdfs:comment>
+    <rdfs:domain rdf:resource="&openelection;Candidacy"/>
+    <rdfs:range rdf:resource="&xsd;boolean"/>
     <rdfs:isDefinedBy rdf:resource="&openelection;"/>
   </rdf:Property>
 
