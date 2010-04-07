@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY openelection "http://openelectiondata.org/0.1/">
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/">
+    <!ENTITY event "http://purl.org/NET/c4dm/event.owl#">
+    <!ENTITY dctype "http://purl.org/dc/dcmitype/">
+]>
+
+<rdf:RDF
+    xmlns:openelection="&openelection;"
+    xmlns:foaf="&foaf;"
+    xmlns:event="&event;"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dctype="&dctype;"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#">
+
+  <owl:Ontology rdf:about="">
+    <dc:title>Ontology for the openelectiondata.org project</dc:title>
+    <dc:identifier>http://openelectiondata.org/0.1/</dc:identifier>
+    <vann:preferredNamespaceUri>http://openelectiondata.org/0.1/</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>openelection</vann:preferredNamespacePrefix>
+
+    <dct:isVersionOf rdf:resource="&openelection;"/>
+
+    <dc:creator>Chris Taggart</dc:creator>
+    <dc:creator>Alexander Dutton</dc:creator>
+
+    <dct:hasFormat>
+      <dctype:Text rdf:about="http://openelectiondata.org/0.1/schema.html">
+        <dc:format>
+          <dct:IMT>
+            <rdf:value>text/html</rdf:value>
+            <rdfs:label xml:lang="en">HTML</rdfs:label>
+          </dct:IMT>
+        </dc:format>
+      </dctype:Text>
+    </dct:hasFormat>
+
+  </owl:Ontology>
+
+  <rdfs:Class rdf:about="&openelection;Party">
+    <rdfs:label>Political party</rdfs:label>
+    <rdfs:comment>A political organisation seeking and/or holding political power.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="&foaf;Organization"/>
+    <rdfs:isDefinedBy rdf:resource="&openelection;"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="&openelection;Poll">
+    <rdfs:label>Poll</rdfs:label>
+    <rdfs:comment>An instance of voting in order to determine a representative.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="&dctype;Event"/>
+    <rdfs:subClassOf rdf:resource="&event;Event"/>
+    <rdfs:isDefinedBy rdf:resource="&openelection;"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="&openelection;Candidacy">
+    <rdfs:label>Candidacy</rdfs:label>
+    <rdfs:comment>An instance of a Candidate standing at a Poll for a Party.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="&dctype;Event"/>
+    <rdfs:subClassOf rdf:resource="&event;Event"/>
+    <rdfs:isDefinedBy rdf:resource="&openelection;"/>
+  </rdfs:Class>
+
+
+  <rdfs:Class rdf:about="&openelection;Candidate">
+    <rdfs:label>Candidate</rdfs:label>
+    <rdfs:comment>A prospective candidate for political office.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="&foaf;Person"/>
+    <rdfs:isDefinedBy rdf:resource="&openelection;"/>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="&openelection;candidacy">
+    <rdfs:label>candidacy</rdfs:label>
+    <rdfs:comment>A Candidacy for the Poll</rdfs:comment>
+    <rdfs:domain rdf:resource="&openelection;Poll"/>
+    <rdfs:range rdf:resource="&openelection;Candidacy"/>
+    <rdfs:isDefinedBy rdf:resource="&openelection;"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="&openelection;candidate">
+    <rdfs:label>candidate</rdfs:label>
+    <rdfs:comment>The Candidate for the Candidacy</rdfs:comment>
+    <rdfs:domain rdf:resource="&openelection;Candidacy"/>
+    <rdfs:range rdf:resource="&openelection;Candidate"/>
+    <rdfs:isDefinedBy rdf:resource="&openelection;"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="&openelection;party">
+    <rdfs:label>party</rdfs:label>
+    <rdfs:comment>The Party being represented by the Candidacy</rdfs:comment>
+    <rdfs:domain rdf:resource="&openelection;Candidacy"/>
+    <rdfs:range rdf:resource="&openelection;Party"/>
+    <rdfs:isDefinedBy rdf:resource="&openelection;"/>
+  </rdf:Property>
+
+</rdf:RDF>

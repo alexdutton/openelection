@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:wot="http://xmlns.com/wot/0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:cc="http://web.resource.org/cc/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xml:lang="en" lang="en"><head><title>Ontology for the openelectiondata.org project</title><link rel="meta" type="application/rdf+xml" title="Ontology for the openelectiondata.org project" href="http://openelectiondata.org/0.1/.rdf"/><style type="text/css">
+    code.xml .text {
+      color: #000000;
+      background: transparent;
+    }
+    code.xml .elem {
+      color: #000080; 
+      background: transparent;
+    }
+    code.xml .attr {
+      color: #008080;
+      background: transparent;
+    }
+    code.xml .attrVal {
+      color: #666666;
+      background: transparent;
+    }
+    code.xml .highlight {
+      background: #ffff00;
+    }
+    
+	h1, h2, h3, h4, h5, h6 {
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-style:italic;
+	}    
+	
+	pre {
+	  border: 1px #9999cc dotted;
+	  background-color: #f3f3ff;
+	  color: #000000; 
+    width: 90%;
+	}
+	
+	blockquote {
+	  border-style: solid;
+	  border-color: #d0dbe7;
+	  border-width: 0 0 0 .25em;
+	  padding-left: 0.5em;
+	}
+	
+	blockquote, q {
+	  font-style: italic;
+	} 
+	
+	body {
+		font-family: verdana, geneva, arial, sans-serif;
+	}
+	
+	a, p,blockquote, q, dl, dd, dt {
+		font-family: verdana, geneva, arial, sans-serif;
+		font-size: 1em;
+	}
+	
+	
+	dt {
+		font-weight: bold;
+	}
+	
+	
+:link { color: #00C; background: transparent }
+:visited { color: #609; background: transparent }
+:link:active, :visited:active { color: #C00; background: transparent }
+:link:hover, :visited:hover { background: #ffa; }
+code :link, code :visited { color: inherit; }
+
+h1, h2, h3, h4, h5, h6 { text-align: left }
+h1, h2, h3 { color: #996633; background: transparent; }
+h1 { font: 900 170% sans-serif; border-bottom: 1px solid gray; } 
+h2 { font: 800 140% sans-serif; border-bottom: 1px solid gray; } 
+h3 { font: 700 120% sans-serif } 
+h4 { font: bold 100% sans-serif }
+h5 { font: italic 100% sans-serif }
+h6 { font: small-caps 100% sans-serif }
+
+body { padding: 0 4em 2em 4em;  line-height: 1.35; }
+	
+pre { margin-left: 2em; /* overflow: auto; */ }
+h1 + h2 { margin-top: 0; }
+h2 { margin: 3em 0 1em 0; }
+h2 + h3 { margin-top: 0; }
+h3 { margin: 2em 0 1em 0; }
+h4 { margin: 1.5em 0 0.75em 0; }
+h5, h6 { margin: 1.5em 0 1em; }
+p { margin: 1em 0; }
+dl, dd { margin-top: 0; margin-bottom: 0; }
+dt { margin-top: 0.75em; margin-bottom: 0.25em; clear: left; }
+dd dt { margin-top: 0.25em; margin-bottom: 0; }
+dd p { margin-top: 0; }
+p + * &gt; li, dd li { margin: 1em 0; }
+dt, dfn { font-weight: bold; font-style: normal; }
+pre, code { font-size: inherit; font-family: monospace; }
+pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
+pre em { font-weight: bolder; font-style: normal; }
+var sub { vertical-align: bottom; font-size: smaller; position: relative; top: 0.1em; }
+blockquote { margin: 0 0 0 2em; border: 0; padding: 0; font-style: italic; }
+ins { background: green; color: white; /* color: green; border: solid thin lime; padding: 0.3em; line-height: 1.6em; */ text-decoration: none; }
+del { background: maroon; color: white; /* color: maroon; border: solid thin red; padding: 0.3em; line-height: 1.6em; */ text-decoration: line-through; }
+body ins, body del { display: block; }
+body * ins, body * del { display: inline; }
+
+table.properties { width: 90%; }
+table.properties th { text-align: right; width: 9em; font-weight: normal;}
+
+table { border-collapse: collapse;  border: solid #999999 1px;}
+table thead { border-bottom: solid #999999 2px; }
+table td, table th { border-left: solid #999999 1px; border-right: solid #999999 1px; border-bottom: solid #999999 1px;; vertical-align: top; padding: 0.2em; }
+
+.historyList {
+  font-size: 0.9em;
+}
+
+    </style></head><body><h1>Ontology for the openelectiondata.org project</h1><dl class="doc-info"><dt>This Version</dt><dd><a href="http://openelectiondata.org/0.1/">http://openelectiondata.org/0.1/</a> [<a href="http://openelectiondata.org/0.1/schema.html">HTML</a>]</dd><dt>Latest Version</dt><dd><a href="http://openelectiondata.org/0.1/">http://openelectiondata.org/0.1/</a></dd><dt>Authors</dt><dd>Chris Taggart</dd><dd>Alexander Dutton</dd><dt>Contributors</dt></dl><h2 id="toc">Table of Contents</h2><ul class="toc"><li><a href="#sec-introduction">Introduction</a></li><li><a href="#sec-namespace">Namespace</a></li><li><a href="#sec-terms">Summary of Terms</a></li><li><a href="#sec-classes">Vocabulary Classes</a></li><li><a href="#sec-properties">Vocabulary Properties</a></li><li><a href="#sec-schema">RDF Schema</a></li></ul><h2 id="sec-introduction">Introduction</h2><h2 id="sec-changes">Changes From Previous Version</h2><ul/><h2 id="sec-namespace">Namespace</h2><p>The URI for this vocabulary is </p><pre><code>http://openelectiondata.org/0.1/</code></pre><p>
+          When used in XML documents the suggested prefix is <code>openelection</code></p><p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p><pre><code>http://openelectiondata.org/0.1/candidacy
+http://openelectiondata.org/0.1/Party</code></pre><p>The term name for a class always starts with an uppercase character. Where the term name is comprised of multiple 
+      concatenated words, the leading character of each word will be an uppercase character. For example:
+      </p><pre><code>Party
+Poll</code></pre><p>The term name for a property always starts with an lowercase character. Where the term name is comprised of multiple 
+      concatenated words, the leading character of the second and each subsequent word will be an uppercase character. For example:
+      </p><pre><code>candidacy
+candidate</code></pre><h2 id="sec-terms">Summary of Terms</h2><p>This vocabulary defines
+
+      4 classes 
+        
+      and 
+      3 properties 
+        
+      .
+    </p><table><tr><th>Term Name</th><th>Type</th><th>Definition</th></tr><tr><td><a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">Candidacy</a></td><td>class</td><td>An instance of a Candidate standing at a Poll for a Party.</td></tr><tr><td><a href="#term-Candidate" title="http://openelectiondata.org/0.1/Candidate">Candidate</a></td><td>class</td><td>A prospective candidate for political office.</td></tr><tr><td><a href="#term-Party" title="http://openelectiondata.org/0.1/Party">Party</a></td><td>class</td><td>A political organisation seeking and/or holding political power.</td></tr><tr><td><a href="#term-Poll" title="http://openelectiondata.org/0.1/Poll">Poll</a></td><td>class</td><td>An instance of voting in order to determine a representative.</td></tr><tr><td><a href="#term-candidacy" title="http://openelectiondata.org/0.1/candidacy">candidacy</a></td><td>property</td><td>A Candidacy for the Poll</td></tr><tr><td><a href="#term-candidate" title="http://openelectiondata.org/0.1/candidate">candidate</a></td><td>property</td><td>The Candidate for the Candidacy</td></tr><tr><td><a href="#term-party" title="http://openelectiondata.org/0.1/party">party</a></td><td>property</td><td>The Party being represented by the Candidacy</td></tr></table><h2 id="sec-classes">Vocabulary Classes</h2><div class="class"><h3 id="term-Candidacy">Class: Candidacy</h3><div class="description"><p class="comment">An instance of a Candidate standing at a Poll for a Party.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/Candidacy</td></tr><tr><th>Label:</th><td>Candidacy</td></tr><tr><th>Subclass of</th><td><a href="http://purl.org/dc/dcmitype/Event">http://purl.org/dc/dcmitype/Event</a> and <a href="http://purl.org/NET/c4dm/event.owl#Event">http://purl.org/NET/c4dm/event.owl#Event</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://purl.org/dc/dcmitype/Event">http://purl.org/dc/dcmitype/Event</a> and 
+        is a
+        <a href="http://purl.org/NET/c4dm/event.owl#Event">http://purl.org/NET/c4dm/event.owl#Event</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Candidate">Class: Candidate</h3><div class="description"><p class="comment">A prospective candidate for political office.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/Candidate</td></tr><tr><th>Label:</th><td>Candidate</td></tr><tr><th>Subclass of</th><td><a href="http://xmlns.com/foaf/0.1/Person">foaf:Person</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Candidate" title="http://openelectiondata.org/0.1/Candidate">openelection:Candidate</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://xmlns.com/foaf/0.1/Person">foaf:Person</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Party">Class: Party</h3><div class="description"><p class="comment">A political organisation seeking and/or holding political power.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/Party</td></tr><tr><th>Label:</th><td>Political party</td></tr><tr><th>Subclass of</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Party" title="http://openelectiondata.org/0.1/Party">openelection:Party</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Poll">Class: Poll</h3><div class="description"><p class="comment">An instance of voting in order to determine a representative.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/Poll</td></tr><tr><th>Label:</th><td>Poll</td></tr><tr><th>Subclass of</th><td><a href="http://purl.org/dc/dcmitype/Event">http://purl.org/dc/dcmitype/Event</a> and <a href="http://purl.org/NET/c4dm/event.owl#Event">http://purl.org/NET/c4dm/event.owl#Event</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Poll" title="http://openelectiondata.org/0.1/Poll">openelection:Poll</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://purl.org/dc/dcmitype/Event">http://purl.org/dc/dcmitype/Event</a> and 
+        is a
+        <a href="http://purl.org/NET/c4dm/event.owl#Event">http://purl.org/NET/c4dm/event.owl#Event</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><h2 id="sec-properties">Vocabulary Properties</h2><div class="property"><h3 id="term-candidacy">Property: candidacy</h3><div class="description"><p class="comment">A Candidacy for the Poll</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/candidacy</td></tr><tr><th>Label:</th><td>candidacy</td></tr><tr><th>Domain</th><td><a href="#term-Poll" title="http://openelectiondata.org/0.1/Poll">openelection:Poll</a></td></tr><tr><th>Range</th><td><a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-candidacy" title="http://openelectiondata.org/0.1/candidacy">openelection:candidacy</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-Poll" title="http://openelectiondata.org/0.1/Poll">openelection:Poll</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-candidate">Property: candidate</h3><div class="description"><p class="comment">The Candidate for the Candidacy</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/candidate</td></tr><tr><th>Label:</th><td>candidate</td></tr><tr><th>Domain</th><td><a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a></td></tr><tr><th>Range</th><td><a href="#term-Candidate" title="http://openelectiondata.org/0.1/Candidate">openelection:Candidate</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-candidate" title="http://openelectiondata.org/0.1/candidate">openelection:candidate</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-party">Property: party</h3><div class="description"><p class="comment">The Party being represented by the Candidacy</p><table class="properties"><tbody><tr><th>URI:</th><td>http://openelectiondata.org/0.1/party</td></tr><tr><th>Label:</th><td>party</td></tr><tr><th>Domain</th><td><a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a></td></tr><tr><th>Range</th><td><a href="#term-Party" title="http://openelectiondata.org/0.1/Party">openelection:Party</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-party" title="http://openelectiondata.org/0.1/party">openelection:party</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-Candidacy" title="http://openelectiondata.org/0.1/Candidacy">openelection:Candidacy</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><h2 id="sec-schema">RDF Schema</h2><p>The schema included here is informational only. The normative schema can be found at <a href="http://openelectiondata.org/0.1/.rdf">http://openelectiondata.org/0.1/.rdf</a></p><pre><code class="xml"><span class="elem">&lt;rdf:RDF</span>
+   <span class="attr">xmlns:owl</span>="<span class="attrVal">http://www.w3.org/2002/07/owl#</span>"
+   <span class="attr">xmlns:vann</span>="<span class="attrVal">http://purl.org/vocab/vann/</span>"
+   <span class="attr">xmlns:dct</span>="<span class="attrVal">http://purl.org/dc/terms/</span>"
+   <span class="attr">xmlns:dctype</span>="<span class="attrVal">http://purl.org/dc/dcmitype/</span>"
+   <span class="attr">xmlns:dc</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/</span>"
+   <span class="attr">xmlns:rdfs</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#</span>"
+   <span class="attr">xmlns:rdf</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+   <span class="attr">xmlns:event</span>="<span class="attrVal">http://purl.org/NET/c4dm/event.owl#</span>"
+   <span class="attr">xmlns:foaf</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/</span>"
+   <span class="attr">xmlns:openelection</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">&gt;</span>
+  
+  <span class="elem">&lt;owl:Ontology</span> <span class="attr">rdf:about</span>="<span class="attrVal"/>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;dc:title</span><span class="elem">&gt;</span><span class="text">Ontology for the openelectiondata.org project</span><span class="elem">&lt;/dc:title&gt;</span>
+    <span class="elem">&lt;dc:identifier</span><span class="elem">&gt;</span><span class="text">http://openelectiondata.org/0.1/</span><span class="elem">&lt;/dc:identifier&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespaceUri</span><span class="elem">&gt;</span><span class="text">http://openelectiondata.org/0.1/</span><span class="elem">&lt;/vann:preferredNamespaceUri&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespacePrefix</span><span class="elem">&gt;</span><span class="text">openelection</span><span class="elem">&lt;/vann:preferredNamespacePrefix&gt;</span>
+    <span class="elem">&lt;dct:isVersionOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dc:creator</span><span class="elem">&gt;</span><span class="text">Chris Taggart</span><span class="elem">&lt;/dc:creator&gt;</span>
+    <span class="elem">&lt;dc:creator</span><span class="elem">&gt;</span><span class="text">Alexander Dutton</span><span class="elem">&lt;/dc:creator&gt;</span>
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;dctype:Text</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://openelectiondata.org/0.1/schema.html</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">text/html</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">HTML</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/dctype:Text&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+  <span class="elem">&lt;/owl:Ontology&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://openelectiondata.org/0.1/Party</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span><span class="elem">&gt;</span><span class="text">Political party</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span>
+      <span class="text">A political organisation seeking and/or holding political power.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdf:type</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2002/07/owl#Class</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://openelectiondata.org/0.1/Poll</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span><span class="elem">&gt;</span><span class="text">Poll</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span>
+      <span class="text">An instance of voting in order to determine a representative.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdf:type</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2002/07/owl#Class</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/dc/dcmitype/Event</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/NET/c4dm/event.owl#Event</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://openelectiondata.org/0.1/Candidacy</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span><span class="elem">&gt;</span><span class="text">Candidacy</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span><span class="text">An instance of a Candidate standing at a Poll for a Party.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdf:type</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2002/07/owl#Class</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/dc/dcmitype/Event</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/NET/c4dm/event.owl#Event</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://openelectiondata.org/0.1/Candidate</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span><span class="elem">&gt;</span><span class="text">Candidate</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span><span class="text">A prospective candidate for political office.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdf:type</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2002/07/owl#Class</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Person</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://openelectiondata.org/0.1/candidacy</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span><span class="elem">&gt;</span><span class="text">candidacy</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span><span class="text">A Candidacy for the Poll</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/Poll</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/Candidacy</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://openelectiondata.org/0.1/candidate</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span><span class="elem">&gt;</span><span class="text">candidate</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span><span class="text">The Candidate for the Candidacy</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/Candidacy</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/Candidate</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://openelectiondata.org/0.1/party</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span><span class="elem">&gt;</span><span class="text">party</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span><span class="text">The Party being represented by the Candidacy</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/Candidacy</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/Party</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://openelectiondata.org/0.1/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+<span class="elem">&lt;/rdf:RDF&gt;</span>
+</code></pre><div id="footer">
+      Documentation generated using the <a href="http://vocab.org/2004/03/toolchain">vocab.org toolchain</a>.
+    </div></body></html>

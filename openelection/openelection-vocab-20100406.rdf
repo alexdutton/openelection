@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY openelection "http://openelectiondata.org/vocab#">
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/">
+]>
+
+<rdf:RDF
+    xmlns:openelection="&openelection;"
+    xmlns:foaf="&foaf;"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dctype="http://purl.org/dc/dcmitype/"
+    xmlns:dct="http://purl.org/dc/terms/" 
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#">
+
+  <owl:Ontology rdf:about="">
+    <dc:title>Ontology for the openelectiondata.org project</dc:title>
+    <dc:identifier>http://openelectiondata.org/vocab-0.1</dc:identifier>
+    <vann:preferredNamespaceUri>http://openelectiondata.org/vocab#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>openelection</vann:preferredNamespacePrefix>
+
+        <dct:hasFormat>
+            <dctype:Text rdf:about="http://openelectiondata.org/vocab-0.1.html">
+                <dc:format>
+                    <dct:IMT>
+                        <rdf:value>text/html</rdf:value>
+                        <rdfs:label xml:lang="en">HTML</rdfs:label>
+                    </dct:IMT>
+                </dc:format>
+            </dctype:Text>
+        </dct:hasFormat>
+
+  </owl:Ontology>
+
+  <rdfs:Class rdf:about="&openelection;Party">
+    <rdfs:label>Political party</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="&foaf;Organization"/>
+  </rdfs:Class>
+
+</rdf:RDF>
